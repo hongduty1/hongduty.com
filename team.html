@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Hongdu Tengyu - Global Talent & Leadership</title>
+    <meta name="description" content="Discover the experts driving Hongdu Tengyu. Our team features veterans from Microsoft, IBM, and top-tier global technology firms.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Team Specific Charts */
+        .competency-box { margin-top: 40px; padding: 30px; background: var(--samsung-gray-bg); border-radius: 24px; }
+        .radar-container { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .radar-svg { width: 180px; height: 180px; transform: rotate(-18deg); }
+        .radar-polygon { fill: rgba(33, 137, 255, 0.2); stroke: var(--samsung-blue); stroke-width: 2; }
+        .radar-grid { fill: none; stroke: #ddd; stroke-width: 1; }
+
+        .skill-distribution { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+        .skill-row { display: flex; align-items: center; gap: 15px; }
+        .skill-name { width: 100px; font-size: 0.75rem; font-weight: 700; color: #444; }
+        .skill-bar-bg { flex: 1; height: 6px; background: #eee; border-radius: 3px; }
+        .skill-bar-fill { height: 100%; background: var(--samsung-black); border-radius: 3px; }
+
+        /* Leadership Team Styling - Enhanced per request */
+        .team-member { text-align: center; padding: 40px 30px; background: white; border-radius: 16px; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee; }
+        .team-member:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 82, 204, 0.1); }
+        .member-avatar { width: 120px; height: 120px; background: linear-gradient(135deg, var(--samsung-blue), #00d4ff); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 800; }
+        .team-member h3 { font-size: 1.4rem; margin-bottom: 8px; font-weight: 800; }
+        .team-member .role { color: var(--samsung-blue); font-weight: 600; margin-bottom: 15px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        .team-member .bio { font-size: 0.95rem; color: #666; line-height: 1.7; text-align: justify; }
+
+        .culture-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
+        .culture-card { padding: 40px; background: var(--samsung-gray-bg); border-radius: 30px; }
+        .culture-card h4 { font-size: 1.5rem; font-weight: 800; margin-bottom: 15px; }
+    </style>
+</head>
+<body class="legal-page">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Hongdu Tengyu</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="height: 60vh; background: var(--samsung-white); color: var(--samsung-black);">
+            <div class="hero-content">
+                <span class="reveal" style="font-size: 0.9rem; font-weight: 800; color: var(--samsung-blue); letter-spacing: 2px; text-transform: uppercase;">Talent & Culture</span>
+                <h1 class="reveal" style="color: var(--samsung-black); font-size: 4rem;">Elite Geek <br>Excellence</h1>
+                <p class="reveal" style="color: var(--samsung-gray-text); font-size: 1.3rem;">Bridging the gap between "Big Tech" architectural rigor and mobile ecosystem agility.</p>
+            </div>
+        </section>
+
+        <!-- Leadership Background -->
+        <section class="product-section">
+            <h2 class="section-title">The Foundation</h2>
+            <div class="samsung-grid">
+                <div class="samsung-block reveal">
+                    <div>
+                        <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px;">Microsoft & IBM Heritage</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8;">Our leadership team brings decades of cumulative experience from global industry titans. This background instills a culture of architectural excellence, high-concurrency systems, and security-first development in every project we manage. We apply enterprise-grade methodologies to the fast-paced world of mobile apps and games, ensuring stability at scale.</p>
+
+                        <div class="skill-distribution" style="margin-top: 30px;">
+                            <div class="skill-row"><span class="skill-name">System Arch</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div></div>
+                            <div class="skill-row"><span class="skill-name">Cloud Infra</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div></div>
+                            <div class="skill-row"><span class="skill-name">Sec Protocols</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="samsung-block dark reveal">
+                    <div>
+                        <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px;">Geek Spirit & Innovation</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">Beyond pedigrees, we are gamers, coders, and digital artists at heart. We push the boundaries of mobile interaction through passion-driven R&D cycles, experimenting with custom shaders, procedural generation, and novel UI paradigms. Our "Zhigao Fanke" feel is the result of a deep understanding of user psychology combined with absolute mastery of the code.</p>
+
+                        <div class="radar-container" style="margin-top: 20px;">
+                            <svg class="radar-svg" viewBox="0 0 100 100">
+                                <circle class="radar-grid" cx="50" cy="50" r="40" />
+                                <circle class="radar-grid" cx="50" cy="50" r="25" />
+                                <polygon class="radar-polygon" points="50,10 85,35 75,80 25,80 15,35" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team -->
+        <section class="product-section" style="margin-top: 100px;">
+            <h2 style="font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 80px; letter-spacing: -1px;">Leadership Team</h2>
+            <div class="samsung-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="team-member reveal">
+                    <div class="member-avatar">CX</div>
+                    <h3>Chen Xu</h3>
+                    <p class="role">Founder & CEO</p>
+                    <p class="bio">Former Microsoft architect with 15+ years in mobile technology. Led teams delivering high-performance products to 100M+ users globally. Specialist in market-entry strategy and global operation scaling.</p>
+                </div>
+                <div class="team-member reveal">
+                    <div class="member-avatar">LW</div>
+                    <h3>Li Wei</h3>
+                    <p class="role">CTO</p>
+                    <p class="bio">Ex-IBM senior engineer specializing in high-performance computing and distributed systems. Expert in Flutter architecture, custom C++ kernels, and cross-platform rendering optimization.</p>
+                </div>
+                <div class="team-member reveal">
+                    <div class="member-avatar">ZM</div>
+                    <h3>Zhang Ming</h3>
+                    <p class="role">Head of Operations</p>
+                    <p class="bio">10+ years in global app publishing and growth hacking. Managed UA campaigns across 50+ countries with $10M+ annual ad spend. Deep expertise in LTV modeling and predictive behavior analytics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture & Values -->
+        <section class="product-section" style="margin-top: 100px; padding-bottom: 120px;">
+             <h2 class="section-title">Our Values</h2>
+             <div class="culture-grid">
+                 <div class="culture-card reveal">
+                     <h4>Innovation First</h4>
+                     <p style="color: #666; line-height: 1.8;">We believe in the power of "radical innovation." Our self-developed pipelines serve as laboratories where we test the boundaries of gameplay and technical performance before deploying them to client projects.</p>
+                 </div>
+                 <div class="culture-card reveal">
+                     <h4>Full-Stack Minds</h4>
+                     <p style="color: #666; line-height: 1.8;">Our recruitment process targets "elite specialists" who possess deep domain expertise but also understand the broader business implications of every line of code. We foster a flat hierarchy where the best ideas win.</p>
+                 </div>
+                 <div class="culture-card reveal">
+                     <h4>Extreme Ownership</h4>
+                     <p style="color: #666; line-height: 1.8;">Every engineer and operator at Hongdu Tengyu is empowered with end-to-end responsibility. We believe that mastery comes from accountability and a deep passion for the craft.</p>
+                 </div>
+                 <div class="culture-card reveal">
+                     <h4>Data Integrity</h4>
+                     <p style="color: #666; line-height: 1.8;">In the global market, data is the only source of truth. We maintain absolute integrity in our reporting and analytics, providing our partners with the transparency needed for high-stakes decision making.</p>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Talent Stats -->
+        <section class="product-section" style="padding: 150px 0; background: var(--samsung-gray-bg);">
+            <div class="reveal" style="text-align: center;">
+                <h2 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 60px;">The Power of Elite</h2>
+                <div class="samsung-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto;">
+                    <div>
+                        <span style="font-size: 4rem; font-weight: 900; color: var(--samsung-blue);">15+</span>
+                        <p style="font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: #666; margin-top: 10px;">Avg. Industry Years</p>
+                    </div>
+                    <div>
+                        <span style="font-size: 4rem; font-weight: 900; color: var(--samsung-blue);">40%</span>
+                        <p style="font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: #666; margin-top: 10px;">Masters/PhD Degree</p>
+                    </div>
+                    <div>
+                        <span style="font-size: 4rem; font-weight: 900; color: var(--samsung-blue);">100%</span>
+                        <p style="font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: #666; margin-top: 10px;">Geek Mentality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="business.html">Business Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Governance</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="max-width: 450px;">
+                    <h5>Hongdu Tengyu Technology</h5>
+                    <p style="font-size: 0.85rem; color: #666; line-height: 1.8;">Elite global technology provider with Microsoft & IBM veteran leadership. Delivering industrial stability with startup innovation.</p>
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">Room 214, 2nd Floor, Building 1, No. 35 Zhenxing Road, Changping District, Beijing, China</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Beijing Hongdu Tengyu Technology Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

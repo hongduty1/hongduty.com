@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise | Hongdu Tengyu - Elite Tech Methodology & Analytics</title>
+    <meta name="description" content="Deep dive into our core R&D philosophy, monetization strategies, global compliance expertise, and high-fidelity project ecosystem at Beijing Hongdu Tengyu Technology Co., Ltd.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        .feature-list { margin-top: 25px; list-style: none; padding-left: 0; }
+        .feature-list li { font-size: 0.95rem; margin-bottom: 12px; padding-left: 24px; position: relative; color: var(--text-main); font-weight: 600; }
+        .feature-list li::before { content: '→'; position: absolute; left: 0; color: var(--samsung-blue); font-weight: 800; }
+
+        /* Specialized Charts for Expertise */
+        .analytics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
+        .chart-box { background: white; padding: 30px; border-radius: 24px; border: 1px solid #eee; }
+        .chart-label { font-size: 0.75rem; font-weight: 800; color: #999; text-transform: uppercase; margin-bottom: 20px; display: block; }
+
+        .performance-bars { display: flex; flex-direction: column; gap: 15px; }
+        .p-bar-row { display: flex; align-items: center; gap: 15px; }
+        .p-bar-name { width: 80px; font-size: 0.7rem; font-weight: 700; color: #444; }
+        .p-bar-bg { flex: 1; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
+        .p-bar-fill { height: 100%; background: var(--samsung-blue); border-radius: 4px; transition: width 1.5s ease-in-out; }
+
+        .area-chart-svg { width: 100%; height: 80px; }
+        .area-path { fill: rgba(33, 137, 255, 0.1); stroke: var(--samsung-blue); stroke-width: 2; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Hongdu Tengyu</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Samsung Style Hero -->
+        <section class="hero" style="height: 60vh;">
+            <div class="hero-content">
+                <span class="reveal" style="font-size: 0.9rem; font-weight: 800; color: var(--samsung-blue); letter-spacing: 2px; text-transform: uppercase;">Technical Core</span>
+                <h1 class="reveal">Expertise & <br>Global Methodology</h1>
+                <p class="reveal">Where elite R&D philosophy meets data-driven monetization and complex global compliance standards.</p>
+            </div>
+        </section>
+
+        <!-- Module 1: R&D Deep Dive -->
+        <section class="product-section">
+            <div class="samsung-block reveal" style="background: var(--samsung-white); border: 1px solid #eee;">
+                <div class="samsung-grid" style="grid-template-columns: 1.2fr 1fr; align-items: start; gap: 60px;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 25px;">01. R&D Philosophy & High-Fidelity Aesthetics</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #333; text-align: justify;">Technical mastery at Hongdu Tengyu is rooted in "Architecture-First" engineering. Our proprietary rendering pipelines and custom C++ kernels enable high-fidelity experiences across the entire spectrum of mobile hardware. We specialize in 2D Pixel Art and Retro-Cyberpunk aesthetics, utilizing custom shaders and procedural generation to create immersive worlds that drive long-term user attachment.</p>
+                        <ul class="feature-list">
+                            <li><strong>Engine-Level Optimization:</strong> Custom Skia-based rendering for Flutter/Unity.</li>
+                            <li><strong>Binary Protocol Efficiency:</strong> Reducing packet overhead by 45% for real-time sync.</li>
+                            <li><strong>Procedural Asset Generation:</strong> Dynamic world-building without bloating package size.</li>
+                        </ul>
+                    </div>
+                    <div class="chart-box">
+                        <span class="chart-label">Rendering Efficiency (FPS Stability)</span>
+                        <div class="performance-bars">
+                            <div class="p-bar-row">
+                                <span class="p-bar-name">Low-Tier</span>
+                                <div class="p-bar-bg"><div class="p-bar-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="p-bar-row">
+                                <span class="p-bar-name">Mid-Tier</span>
+                                <div class="p-bar-bg"><div class="p-bar-fill" style="width: 98%;"></div></div>
+                            </div>
+                            <div class="p-bar-row">
+                                <span class="p-bar-name">Flagship</span>
+                                <div class="p-bar-bg"><div class="p-bar-fill" style="width: 100%;"></div></div>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.75rem; color: #999; margin-top: 20px;">Maintains consistent performance even under heavy GPU load.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Monetization Architecture -->
+        <section class="product-section" style="margin-top: 20px;">
+            <div class="samsung-block dark reveal">
+                <div class="samsung-grid" style="grid-template-columns: 1fr 1.2fr; align-items: start; gap: 60px;">
+                    <div class="chart-box" style="background: #111; border-color: #222;">
+                        <span class="chart-label" style="color: #666;">Monthly Recurring Revenue (MRR) Growth</span>
+                        <svg class="area-chart-svg" viewBox="0 0 400 100">
+                            <path class="area-path line" d="M0,80 Q100,75 200,40 T400,10 L400,100 L0,100 Z" style="fill: rgba(33, 137, 255, 0.1); stroke: var(--samsung-blue); stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0;"/>
+                        </svg>
+                        <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.7rem; color: #555;">
+                            <span>Month 1</span>
+                            <span>Month 6</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 25px;">02. Diversified Monetization Matrix</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc; text-align: justify;">Our revenue strategy is a balanced ecosystem of IAP, subscription stacking, and advanced mediation. We leverage behavioral data to optimize reward-video pacing and dynamic VIP tiering. This creates a sustainable lifecycle where monetization enhances, rather than detracts from, the user experience.</p>
+                        <ul class="feature-list" style="color: white;">
+                            <li><strong>Localized PPP Adjustments:</strong> Dynamic pricing based on regional purchasing power.</li>
+                            <li><strong>Predictive Churn Rewarding:</strong> Automatic triggers for retention-based offers.</li>
+                            <li><strong>Hybrid Mediation:</strong> Real-time bidding across 10+ global networks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Compliance & Distribution -->
+        <section class="product-section" style="margin-top: 20px;">
+            <div class="samsung-block reveal" style="background: var(--samsung-gray-bg);">
+                <div class="samsung-grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px;">03. Global Compliance Fortress</h2>
+                        <p style="font-size: 1rem; line-height: 1.7; color: #444; text-align: justify;">We provide an automated compliance layer for all projects. Our proprietary monitoring engine ensures that every build is audited against the latest Google Play and App Store policies before submission. From COPPA-grade age gates to GDPR data residency, we manage the global regulatory complexity so you don't have to.</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="chart-box" style="text-align: center;">
+                            <h3 style="font-size: 2rem; font-weight: 900; color: var(--samsung-blue);">100%</h3>
+                            <p style="font-size: 0.7rem; font-weight: 800; color: #999;">STORE APPROVAL RATE</p>
+                        </div>
+                        <div class="chart-box" style="text-align: center;">
+                            <h3 style="font-size: 2rem; font-weight: 900; color: var(--samsung-blue);">&lt; 24h</h3>
+                            <p style="font-size: 0.7rem; font-weight: 800; color: #999;">POLICY AUDIT SPEED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section style="background: var(--samsung-black); color: white; padding: 140px 20px; text-align: center;">
+             <div class="business-container reveal">
+                 <h2 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 40px;">Harness Our Elite Expertise</h2>
+                 <p style="font-size: 1.4rem; color: #aaa; max-width: 800px; margin: 0 auto 60px;">Transform your digital concept into a global benchmark.</p>
+                 <a href="contact.html" class="btn btn-primary" style="padding: 18px 50px;">Consult with Our Architects</a>
+             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="business.html">Business Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Governance</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="max-width: 450px;">
+                    <h5>Beijing Hongdu Tengyu Technology Co., Ltd.</h5>
+                    <p style="font-size: 0.85rem; color: #666; line-height: 1.8;">Elite global technology provider with Microsoft & IBM veteran leadership. Delivering industrial stability with startup innovation.</p>
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">Room 214, 2nd Floor, Building 1, No. 35 Zhenxing Road, Changping District, Beijing, China</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Beijing Hongdu Tengyu Technology Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

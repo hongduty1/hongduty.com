@@ -1,0 +1,3 @@
+# Hongdu Tengyu Technology app-ads.txt
+# Placeholder for authorized digital sellers.
+# Example: google.com, pub-xxxxxxxxxxxxxxxx, DIRECT, f08c47fec0942fa0

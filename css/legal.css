@@ -1,0 +1,130 @@
+/* Legal Pages Specific Styles */
+.legal-page {
+    background-color: #f0f2f5;
+}
+
+.legal-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.legal-sidebar-layout {
+    display: flex;
+}
+
+.legal-sidebar {
+    width: 280px;
+    background: #f8f9fa;
+    border-right: 1px solid #eef0f2;
+    padding: 30px 20px;
+    height: calc(100vh - 150px);
+    position: sticky;
+    top: 100px;
+    overflow-y: auto;
+}
+
+.legal-sidebar h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #65676b;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.legal-nav {
+    list-style: none;
+}
+
+.legal-nav li {
+    margin-bottom: 12px;
+}
+
+.legal-nav a {
+    color: #4b4f56;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1.4;
+    display: block;
+}
+
+.legal-nav a:hover {
+    color: #0052cc;
+}
+
+.legal-content {
+    flex: 1;
+    padding: 60px 50px;
+}
+
+.legal-content h1 {
+    font-size: 2.2rem;
+    color: #1c1e21;
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    color: #65676b;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ebedf0;
+    padding-bottom: 20px;
+}
+
+.legal-content h2 {
+    font-size: 1.4rem;
+    color: #1c1e21;
+    margin: 40px 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.legal-content h3 {
+    font-size: 1.1rem;
+    color: #1c1e21;
+    margin: 25px 0 15px;
+}
+
+.legal-content p {
+    color: #4b4f56;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.legal-content ul, .legal-content ol {
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+.legal-content li {
+    color: #4b4f56;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.clause-num {
+    font-weight: 700;
+    color: #1c1e21;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .legal-sidebar-layout {
+        flex-direction: column;
+    }
+    .legal-sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid #eef0f2;
+    }
+    .legal-content {
+        padding: 40px 25px;
+    }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business | Hongdu Tengyu - Global Strategy & Methodology</title>
+    <meta name="description" content="Deep dive into our R&D philosophy, monetization matrix, and industry insights at Beijing Hongdu Tengyu Technology Co., Ltd.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        .vision-section { background: var(--samsung-black); color: white; padding: 160px 20px; text-align: center; }
+        .vision-content { max-width: 900px; margin: 0 auto; }
+        .vision-content h2 { font-size: 4rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -2px; }
+        .vision-content p { font-size: 1.5rem; color: #aaa; line-height: 1.6; font-style: italic; }
+        .challenge-card { border: 1px solid #eee; padding: 40px; border-radius: 20px; background: white; }
+        .challenge-card h4 { color: var(--samsung-blue); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 15px; font-weight: 800; }
+
+        /* Chart Styling for Business Page */
+        .analytics-block { margin-top: 40px; padding: 30px; background: #fafafa; border-radius: 20px; }
+        .stat-bar-group { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+        .stat-bar-container { display: flex; align-items: center; gap: 15px; }
+        .stat-bar-label { width: 120px; font-size: 0.8rem; font-weight: 700; color: #666; }
+        .stat-bar-bg { flex: 1; height: 10px; background: #eee; border-radius: 5px; overflow: hidden; }
+        .stat-bar-fill { height: 100%; background: var(--samsung-blue); border-radius: 5px; transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); }
+        .stat-bar-val { width: 50px; font-size: 0.8rem; font-weight: 800; color: var(--samsung-black); text-align: right; }
+
+        .line-chart-svg { width: 100%; height: 100px; margin-top: 20px; }
+        .dot { fill: var(--samsung-blue); }
+        .line { stroke: var(--samsung-blue); stroke-width: 3; fill: none; stroke-dasharray: 500; stroke-dashoffset: 500; transition: stroke-dashoffset 2s ease-in-out; }
+        .reveal.active .line { stroke-dashoffset: 0; }
+
+        /* Timeline & Pricing Styling */
+        .timeline { position: relative; max-width: 1200px; margin: 50px auto; padding: 40px 0; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: #eee; transform: translateX(-50%); }
+        .timeline-item { position: relative; width: 50%; padding: 20px 40px; box-sizing: border-box; }
+        .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; text-align: left; }
+        .timeline-marker { position: absolute; top: 20px; left: 50%; width: 40px; height: 40px; background: var(--samsung-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; transform: translateX(-50%); z-index: 10; border: 4px solid white; }
+        .timeline-content { background: white; padding: 30px; border-radius: 20px; border: 1px solid #eee; transition: var(--transition-samsung); }
+        .timeline-item:hover .timeline-content { transform: scale(1.02); border-color: var(--samsung-blue); }
+
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+        .pricing-card { background: white; padding: 50px 40px; border-radius: 30px; border: 1px solid #eee; text-align: center; position: relative; transition: var(--transition-samsung); }
+        .pricing-card.featured { background: var(--samsung-black); color: white; border-color: var(--samsung-black); transform: scale(1.05); z-index: 2; }
+        .pricing-card h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+        .price { font-size: 2.2rem; font-weight: 900; color: var(--samsung-blue); margin-bottom: 30px; }
+        .pricing-card.featured .price { color: var(--samsung-blue); }
+        .pricing-card ul { list-style: none; padding: 0; margin-bottom: 40px; text-align: left; }
+        .pricing-card li { margin-bottom: 15px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
+        .pricing-card li::before { content: '✓'; color: var(--samsung-blue); font-weight: 800; }
+        .badge { position: absolute; top: 20px; right: 20px; background: var(--samsung-blue); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+
+        @media (max-width: 992px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: scale(1); }
+            .timeline::before { left: 40px; }
+            .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 80px; }
+            .timeline-marker { left: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Hongdu Tengyu</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="business.html" class="active">Business</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="height: 70vh;">
+            <div class="hero-content">
+                <span class="reveal" style="font-size: 0.9rem; font-weight: 800; color: var(--samsung-blue); letter-spacing: 2px; text-transform: uppercase;">Insights & Strategy</span>
+                <h1 class="reveal">The Science of <br>Global Scaling</h1>
+                <p class="reveal">Navigating the intersection of elite engineering and cross-border digital commerce.</p>
+            </div>
+        </section>
+
+        <!-- The Challenge Section -->
+        <section class="product-section">
+            <h2 class="section-title">The Global Challenge</h2>
+            <div class="samsung-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="challenge-card reveal">
+                    <h4>01. UA Hyper-Inflation</h4>
+                    <p style="text-align: justify; font-size: 0.95rem; margin-bottom: 20px;">Traditional targeting is hampered by privacy limitations, driving UA costs to record highs.</p>
+                    <div class="stat-bar-group">
+                        <div class="stat-bar-container">
+                            <span class="stat-bar-label">2021 CPI</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 40%;"></div></div>
+                            <span class="stat-bar-val">$1.2</span>
+                        </div>
+                        <div class="stat-bar-container">
+                            <span class="stat-bar-label">2023 CPI</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 90%;"></div></div>
+                            <span class="stat-bar-val">$3.8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="challenge-card reveal">
+                    <h4>02. Retention Volatility</h4>
+                    <p style="text-align: justify; font-size: 0.95rem; margin-bottom: 20px;">Micro-attention spans lead to rapid churn without architecture-level engagement hooks.</p>
+                    <svg class="line-chart-svg" viewBox="0 0 400 100">
+                        <path class="line" d="M0,80 L80,60 L160,70 L240,40 L320,50 L400,20" />
+                        <circle class="dot" cx="400" cy="20" r="5" />
+                    </svg>
+                    <p style="font-size: 0.7rem; color: #999; margin-top: 10px; text-align: center;">Average Churn Trend without DDA</p>
+                </div>
+                <div class="challenge-card reveal">
+                    <h4>03. Compliance Barriers</h4>
+                    <p style="text-align: justify; font-size: 0.95rem; margin-bottom: 20px;">Fragmentation of data laws (GDPR, PIPL) creates high operational risks and overhead.</p>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <div style="flex: 1; height: 60px; background: #eee; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #ccc;">GDPR</div>
+                        <div style="flex: 1; height: 60px; background: var(--samsung-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white;">SAFE</div>
+                        <div style="flex: 1; height: 60px; background: #eee; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #ccc;">PIPL</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Edge Section -->
+        <section class="product-section" style="margin-top: 100px;">
+            <div class="samsung-block reveal" style="background: var(--samsung-gray-bg); padding: 80px;">
+                <div style="max-width: 900px;">
+                    <span style="color: var(--samsung-blue); font-weight: 800; letter-spacing: 1px;">OUR MOAT</span>
+                    <h2 style="font-size: 3.5rem; font-weight: 900; margin: 20px 0; letter-spacing: -1px;">Engineering the Edge</h2>
+
+                    <div class="samsung-grid" style="grid-template-columns: repeat(2, 1fr); gap: 40px; text-align: left;">
+                        <div>
+                            <h4 style="font-weight: 800; margin-bottom: 10px;">Architecture-Level Optimization</h4>
+                            <p style="font-size: 0.95rem; color: #555;">60FPS performance on low-end hardware via custom C++ kernels.</p>
+                            <div style="margin-top: 15px; font-size: 2rem; font-weight: 900; color: var(--samsung-blue);">-40% <span style="font-size: 0.8rem; color: #999; font-weight: 400;">Latency Reduction</span></div>
+                        </div>
+                        <div>
+                            <h4 style="font-weight: 800; margin-bottom: 10px;">Dynamic LTV Orchestration</h4>
+                            <p style="font-size: 0.95rem; color: #555;">AI-driven reward-pacing to nurture users through a customized curve.</p>
+                            <div style="margin-top: 15px; font-size: 2rem; font-weight: 900; color: var(--samsung-blue);">+180% <span style="font-size: 0.8rem; color: #999; font-weight: 400;">ARPPU Increase</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Process Timeline -->
+        <section class="product-section">
+            <h2 class="section-title" id="process">Our Development Process</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Discovery & Planning</h3>
+                        <span style="font-size: 0.8rem; font-weight: 800; color: var(--samsung-blue);">WEEK 1-2</span>
+                        <p style="margin-top: 15px;">Requirement analysis, market research, technical feasibility study, and project roadmap creation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Design & Prototyping</h3>
+                        <span style="font-size: 0.8rem; font-weight: 800; color: var(--samsung-blue);">WEEK 3-4</span>
+                        <p style="margin-top: 15px;">UI/UX design, high-fidelity interactive prototypes, user testing, and iterative refinements.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Development & Testing</h3>
+                        <span style="font-size: 0.8rem; font-weight: 800; color: var(--samsung-blue);">WEEK 5-12</span>
+                        <p style="margin-top: 15px;">Agile sprints, continuous integration (CI/CD), automated testing, and rigorous quality assurance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Launch & Optimization</h3>
+                        <span style="font-size: 0.8rem; font-weight: 800; color: var(--samsung-blue);">WEEK 13+</span>
+                        <p style="margin-top: 15px;">App store submission, ASO optimization, performance monitoring, and data-driven iterations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing / Engagement Models -->
+        <section class="product-section" style="padding-bottom: 120px;">
+            <h2 class="section-title" id="pricing">Engagement Models</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <h3>Project-Based</h3>
+                    <p class="price">Custom Quote</p>
+                    <ul>
+                        <li>Fixed scope & timeline</li>
+                        <li>Dedicated project manager</li>
+                        <li>Full source code delivery</li>
+                        <li>3 months post-launch support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="border-color: black; color: black; width: 100%;">Get Quote</a>
+                </div>
+                <div class="pricing-card featured reveal">
+                    <div class="badge">Popular</div>
+                    <h3>Retainer Model</h3>
+                    <p class="price">From $5K/mo</p>
+                    <ul>
+                        <li>Ongoing development & maintenance</li>
+                        <li>Priority support (24h response)</li>
+                        <li>Monthly strategy reviews</li>
+                        <li>Scalable team allocation</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%;">Start Now</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <h3>Revenue Share</h3>
+                    <p class="price">Performance</p>
+                    <ul>
+                        <li>Low upfront investment</li>
+                        <li>Shared risk & reward</li>
+                        <li>Joint marketing efforts</li>
+                        <li>Long-term partnership</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="border-color: black; color: black; width: 100%;">Discuss Terms</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visionary Closing -->
+        <section class="vision-section">
+            <div class="vision-content reveal">
+                <span style="color: var(--samsung-blue); font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">Our Commitment</span>
+                <h2>Scaling Digital Dreams <br>with Infinite Precision</h2>
+                <p>"In an increasingly complex digital world, our mission is to empower innovation by removing the friction of global growth. We provide a foundation for developers to reach their full potential without borders."</p>
+                <div style="margin-top: 60px;">
+                    <a href="contact.html" class="btn btn-primary" style="padding: 18px 50px; font-size: 1.1rem;">Partner with Us Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="business.html">Business Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Governance</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="max-width: 450px;">
+                    <h5>Beijing Hongdu Tengyu Technology Co., Ltd.</h5>
+                    <p style="font-size: 0.85rem; color: #666; line-height: 1.8;">Elite global technology provider with Microsoft & IBM veteran leadership. Delivering industrial stability with startup innovation.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Beijing Hongdu Tengyu Technology Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
