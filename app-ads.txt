@@ -1075,7 +1075,6 @@ zetaglobal.net, 815, RESELLER
 improvedigital.com, 2316, RESELLER
 freewheel.tv, 1603124, RESELLER
 onetag.com, 5dcfcdb41f0856c, RESELLER
-vungle.com,6a575f77ede581a04248c15f,DIRECT,c107d686becd2d77
 33across.com,001Pg0000197KcKIAU,RESELLER,bbea06d9c4d2853c
 contextweb.com,562852,RESELLER,89ff185a4c4e857c
 media.net,8CU12AQ1Y,RESELLER
